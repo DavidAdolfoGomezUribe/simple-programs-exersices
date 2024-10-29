@@ -1,27 +1,11 @@
-#Escriba un programa que reciba como entrada el radio de un círculo y entregue como salida su perímetro y su área:
+#Escriba un programa que calcule el promedio de 4 notas ingresadas por el usuario:
+#
+#Primera nota: 55
+#Segunda nota: 71
+#Tercera nota: 46
+#Cuarta nota: 87
+#El promedio es: 64.7
 
-#Ingrese el radio: 5
-#Perimetro: 31.4
-#Área: 78.5
-
-import math
-
-print("\n")
-print("Welcome to the program to calculate the area and the perimeter of a circle, please enter the following data: \n ")
-print("(remember only put numbers) \n ")
-
-try:
-    radius = int(input("Radius: "))
-
-
-    area = math.pi * (radius**2)
-
-    perimeter = 2 * math.pi * radius
-
-
-    print(f"""
-        The area of the circule will be {area} and his perimeter will be {perimeter}
-    """)
-
-except:
-    print("(remember only put numbers \n )") 
+name = input("Hello, please enter your full name: \n ")
+print(f""" Welcome back Mr/Ms {name}, this is a program to calculate your notes average \n 
+           Please enter your 4 notes: \n """) 
