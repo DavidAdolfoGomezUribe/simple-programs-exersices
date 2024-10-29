@@ -1,10 +1,11 @@
-#Escriba un programa que calcule el promedio de 4 notas ingresadas por el usuario:
+#Escriba un programa que convierta de centímetros a pulgadas. 
+#Una pulgada es igual a 2.54 centímetros.
 #
-#Primera nota: 55
-#Segunda nota: 71
-#Tercera nota: 46
-#Cuarta nota: 87
-#El promedio es: 64.7
+#Ingrese longitud: 45
+#45 cm = 17.7165 in
+#Ingrese longitud: 13
+#13 cm = 5.1181 in
+
 
 print(f""" 
 ██╗    ██╗███████╗██╗      ██████╗ ██████╗ ███╗   ███╗███████╗
@@ -19,21 +20,15 @@ name = input("    Hello, please enter your full name:  ")
 while True:
    
     print(f""" \n
-        Welcome back Mr/Ms {name}, this is a program to calculate your notes average \n 
-        Please enter your 4 notes: \n """) 
+        Welcome back Mr/Ms {name}, this is a program for convert centemiters to inch \n 
+        Please enter your centemiters: \n """) 
     try :    
 
-        noteOne =   float(input("    Please enter your firs note   : "))
+        centemiters =   float(input("        "))
 
-        noteTwo =   float(input("    Please enter your second  note: "))
+        totalInch = (centemiters / 2.54)
 
-        noteThree = float(input("    Please enter your third  note : "))
-
-        noteFour =  float(input("    Please enter your fourth  note: "))
-
-        totalNotes = (noteOne + noteTwo + noteThree + noteFour)/4
-
-        print("    Your final average note is: ", totalNotes)
+        print("    Your inch is: ", totalInch, " in")
 
         continueAsk = input( "\n    Do you want to calculate again? (yes/no): " ).strip().lower()
         
