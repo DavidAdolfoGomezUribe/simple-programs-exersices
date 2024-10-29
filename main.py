@@ -1,10 +1,10 @@
-#Escriba un programa que convierta de centímetros a pulgadas. 
-#Una pulgada es igual a 2.54 centímetros.
-#
-#Ingrese longitud: 45
-#45 cm = 17.7165 in
-#Ingrese longitud: 13
-#13 cm = 5.1181 in
+#Escriba un programa que pida al usuario un entero de tres dígitos,
+#y entregue el número con los dígitos en orden inverso:
+#Ingrese numero: 345
+#543
+#Ingrese numero: 241
+#142
+
 
 
 print(f""" 
@@ -20,25 +20,32 @@ name = input("    Hello, please enter your full name:  ")
 while True:
    
     print(f""" \n
-        Welcome back Mr/Ms {name}, this is a program for convert centemiters to inch \n 
-        Please enter your centemiters: \n """) 
+        Welcome back Mr/Ms {name}, this is a program for invert the order of your digits \n 
+        Please enter your digits: \n """) 
     try :    
+        
+        digits =   input("        ")
+        
+        if digits.isdigit() : #super util el isdigit(), tambien puede usarse isdecimal()
+        
 
-        centemiters =   float(input("        "))
+            invertDigits = digits[::-1] #el slicinng permite crear una subcadena de la cadena y el -1 para invertirla
+        
+            print("        Your invert digits is: ", invertDigits)
 
-        totalInch = (centemiters / 2.54)
+        else :  
 
-        print("    Your inch is: ", totalInch, " in")
+            print("        Enter valid digits (nubers only)")
 
-        continueAsk = input( "\n    Do you want to calculate again? (yes/no): " ).strip().lower()
+        continueAsk = input( "\n    Do you want to invert again? (yes/no): " ).strip().lower()
         
         if continueAsk != "yes" :
-                print("    Thaks for using the program. Goodbye!")
+                print("    Thaks for using the program. Goodbye! \n ")
                 break
     except :            
-        continueAsk = input( "\n    Do you want to calculate again? (yes/no): " ).strip().lower()
+        continueAsk = input( "\n    Do you want to invert again? (yes/no): " ).strip().lower()
         
         if continueAsk != "yes" :
-                print("    Thaks for using the program. Goodbye!")
+                print("    Thaks for using the program. Goodbye! \n ")
                 break
 
