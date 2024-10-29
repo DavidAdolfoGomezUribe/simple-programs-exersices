@@ -14,22 +14,36 @@ print(f"""
 ╚███╔███╔╝███████╗███████╗╚██████╗╚██████╔╝██║ ╚═╝ ██║███████╗
  ╚══╝╚══╝ ╚══════╝╚══════╝ ╚═════╝ ╚═════╝ ╚═╝     ╚═╝╚══════╝                                                        
                                 """) 
-
 name = input("    Hello, please enter your full name:  ")
-print(f""" \n
-    Welcome back Mr/Ms {name}, this is a program to calculate your notes average \n 
-    Please enter your 4 notes: \n """) 
 
-noteOne =   int(input("    Please enter your firs note   : "))
+while True:
+   
+    print(f""" \n
+        Welcome back Mr/Ms {name}, this is a program to calculate your notes average \n 
+        Please enter your 4 notes: \n """) 
+    try :    
 
-noteTwo =   int(input("    Please enter your second  note: "))
+        noteOne =   float(input("    Please enter your firs note   : "))
 
-noteThree = int(input("    Please enter your third  note : "))
+        noteTwo =   float(input("    Please enter your second  note: "))
 
-noteFour =  int(input("    Please enter your fourth  note: "))
+        noteThree = float(input("    Please enter your third  note : "))
 
-totalNotes = (noteOne + noteTwo + noteThree + noteFour)/4
+        noteFour =  float(input("    Please enter your fourth  note: "))
 
-print("    Your final average note is: ", totalnotes)
+        totalNotes = (noteOne + noteTwo + noteThree + noteFour)/4
 
+        print("    Your final average note is: ", totalNotes)
+
+        continueAsk = input( "\n    Do you want to calculate again? (yes/no): " ).strip().lower()
+        
+        if continueAsk != "yes" :
+                print("    Thaks for using the program. Goodbye!")
+                break
+    except :            
+        continueAsk = input( "\n    Do you want to calculate again? (yes/no): " ).strip().lower()
+        
+        if continueAsk != "yes" :
+                print("    Thaks for using the program. Goodbye!")
+                break
 
