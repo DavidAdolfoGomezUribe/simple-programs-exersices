@@ -60,7 +60,7 @@ while True:
         k = 5.4e-3   #termic condictivity of the egg
         tW = 100     #boiling water temperature
         tY = float(input("        wanted egg temperature (between 63 and 70 greades for eggs in the cup): ")) 
-
+ 
         t=(  ((mass**(2/3))*c*(p**(1/3)))/( (k*(math.pi**2)) *  ((4*math.pi)/3)**(2/3)  )  )  *  (math.log(0.76 * ((tW -tO ) / (tY - tO)) ))
         
         tR = round(t, 2)
